@@ -1,0 +1,15 @@
+# Ignorowanie wirtualnego środowiska Pythona
+.venv/
+venv/
+
+# Pliki baz danych
+*.sqlite3
+
+# Konfiguracje IDE
+.idea/
+.vscode/
+
+# Pliki cache i pycache
+__pycache__/
+*.pyc
+*.pyo
