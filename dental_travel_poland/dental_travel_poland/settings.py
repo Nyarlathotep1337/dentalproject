@@ -76,10 +76,15 @@ WSGI_APPLICATION = 'dental_travel_poland.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'dental_travel',
+        'USER': 'postgres',  # Upewnij się, że to twoja nazwa użytkownika PostgreSQL
+        'PASSWORD': 'Ebola',  # Wpisz hasło, które ustawiłeś
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
+
 
 
 # Password validation
