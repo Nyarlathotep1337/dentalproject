@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dental Travel Poland</title>
+</head>
+<body>
+    <h1>Welcome to Dental Travel Poland</h1>
+
+    <h2>Our Services</h2>
+    <ul>
+        {% for service in services %}
+            <li><a href="{% url 'service_detail' service.id %}">{{ service.name }}</a></li>
+        {% endfor %}
+    </ul>
+
+    <h2>Our Locations</h2>
+    <ul>
+        {% for location in locations %}
+            <li>{{ location.city }} - {{ location.address }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Testimonials</h2>
+    <ul>
+        {% for testimonial in testimonials %}
+            <li>"{{ testimonial.content }}" - {{ testimonial.patient_name }} ({{ testimonial.rating }}/5)</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
